@@ -1,0 +1,1 @@
+# price-managment-rates-intervals
