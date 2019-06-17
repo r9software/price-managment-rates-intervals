@@ -181,7 +181,7 @@
 
                 this.isLoading = true;
                 let self=this;
-                axios.get('/price-managment-rates-intervals/prices.php?method=clear')
+                axios.get('/API/price-managment-rates-intervals/prices.php?method=clear')
                     .then(function (response) {
                         // handle success
                         self.isLoading = false;
@@ -221,7 +221,7 @@
                     this.isLoading = true;
                     let startDate = moment(this.startDay, 'MMMM Do YYYY, h:mm:ss a').format('YYYY-MM-DD');
                     let endDate = moment(this.endDay, 'MMMM Do YYYY, h:mm:ss a').format('YYYY-MM-DD');
-                    axios.get('/price-managment-rates-intervals/prices.php?method=add&date_start=' + startDate + '&date_end=' + endDate + "&price=" + this.price)
+                    axios.get('/API/price-managment-rates-intervals/prices.php?method=add&date_start=' + startDate + '&date_end=' + endDate + "&price=" + this.price)
                         .then(function (response) {
                             // handle success
                             self.isLoading = false;
@@ -266,7 +266,7 @@
                     confirmButtonText: 'Yes, delete it!'
                 }).then((result) => {
                     if (result.value) {
-                        axios.get('/price-managment-rates-intervals/prices.php?id=' + id + '&method=delete').then(function (response) {
+                        axios.get('/API/price-managment-rates-intervals/prices.php?id=' + id + '&method=delete').then(function (response) {
                             // handle success
                             self.isLoading = false;
                             self.getCurrentPrices();
@@ -290,7 +290,7 @@
                 this.isLoading = true;
                 let self = this;
                 this.date = moment(this.date).format('YYYY-MM');
-                axios.get('/price-managment-rates-intervals/prices.php?date=' + this.date)
+                axios.get('/API/price-managment-rates-intervals/prices.php?date=' + this.date)
                     .then(function (response) {
                         // handle success
                         self.prices.splice(0, self.prices.length);

@@ -131,7 +131,7 @@
                 let dateChanged=false;
                 if(this.price.date_start!==dateStart || this.price.date_end!==dateEnd)
                     dateChanged=true;
-                 axios.get('/price-managment-rates-intervals/prices.php?method=update&id='+this.id+'&date_changed='+dateChanged+'&date_start=' + dateStart + '&date_end=' + dateEnd + "&price=" + this.priceDays)
+                 axios.get('/API/price-managment-rates-intervals/prices.php?method=update&id='+this.id+'&date_changed='+dateChanged+'&date_start=' + dateStart + '&date_end=' + dateEnd + "&price=" + this.priceDays)
                     .then(function (response) {
                         // handle success
                         Swal.fire('Success',
