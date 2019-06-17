@@ -18,3 +18,6 @@ such fields:
 - date_start (date)
 - date_end (date)
 - price (float)
+
+URL
+http://www.midevs.com/API/price-managment-rates-intervals/
