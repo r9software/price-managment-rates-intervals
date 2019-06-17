@@ -20,4 +20,4 @@ such fields:
 - price (float)
 
 URL
-http://www.midevs.com/API/price-managment/
+http://www.midevs.com/API/price-managment-rates-intervals/
